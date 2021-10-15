@@ -14,7 +14,7 @@ def factorize(a: np.array):
 
 
 class P04:
-    points = np.loadtxt("inp_P02.txt", delimiter=' ')
+    points = np.loadtxt("inp_P04.txt", delimiter=' ')
     omega = factorize(points[:, 0])
 
     def find_d(self):
