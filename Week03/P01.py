@@ -53,8 +53,13 @@ if __name__ == "__main__":
     A = RUN.construct_divided_diff()
     B = RUN.construct_poly_table()
 
-    a1 = A[0, :]    # nội suy tiến
-    a2 = np.array([A[len(X)-i-1][i] for i in range(len(X))])    # nội suy lùi
+    # a1 = A[0, :]    # nội suy tiến
+    # a2 = np.array([A[len(X)-i-1][i] for i in range(len(X))])    # nội suy lùi
 
     A_new = RUN.add_new_points(A, X_new, Y_new)
-    print(A_new)
+
+    X_test = np.array([2, 2.2, 2.4, 2.6, 2.8, 2.5, 2.1, 2.3, 2.7])
+    Y_test = np.array([1.2837, 1.9034, 1.8885, 1.0938, 0.1662, 1.8179, 1.6924, 1.8975, 0.8885])
+    p_test = P01(X_test, Y_test)
+    A_test = p_test.construct_divided_diff()
+    print(A_test - A_new)
