@@ -24,15 +24,9 @@ namespace Week05
 
         public void Display()
         {
-            foreach (var x in X)
-            {
-                Console.WriteLine(x);
-            }
-            Console.WriteLine("-------------------");
-            foreach (var y in Y)
-            {
-                Console.WriteLine(y);
-            }
+            this.X.ForEach(x => Console.Write(x + " "));
+            Console.Write("\n");
+            this.Y.ForEach(y => Console.Write(y + " "));
         }
     }
 
@@ -43,9 +37,6 @@ namespace Week05
             string path = "input.txt";
             CentralInterpolation p = new CentralInterpolation(path);
             p.Display();
-
-            double z = 8.12;
-            Console.WriteLine(z);
         }
     }
 }
