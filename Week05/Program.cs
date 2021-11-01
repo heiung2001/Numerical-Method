@@ -69,8 +69,13 @@ namespace Week05
                 above = Add_Above(idx-k);
                 Gauss.AddRange(below.TakeLast(2));
             }
+
+            for (int k = 0; k < Gauss.Count; ++k)
+            {
+                Gauss[k] = Gauss[k]/Enumerable.Range(1, k).Aggregate(1, (p, item) => p*item);
+            }
         }
-        public int[,] Construct_coeff_matrix(int numberOfX)
+        static public int[,] Construct_coeff_matrix(int numberOfX)
         {
             int n = numberOfX;
             int[,] matrix = new int[n, n];
@@ -86,7 +91,7 @@ namespace Week05
             for (int i = 1; i < n; i++)
             {
                 matrix[i, n-i-1] = 1;
-                for (int j = n-i; i < n-1; j++)
+                for (int j = n-i; j < n-1; j++)
                 {
                     matrix[i, j] = matrix[i-1, j+1] - x[i-1]*matrix[i-1, j];
                 }
@@ -103,12 +108,30 @@ namespace Week05
 
     class Program
     {
+        static public List<double> matMul(List<double> lst, int[,] arr)
+        {
+            int n = lst.Count();
+            List<double> temp = new List<double>(new double[n]);
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int k = 0; k < n; k++)
+                {
+                    temp[i] += lst[k] * arr[k, i];
+                }
+            }
+            return temp;
+        }
         static void Main(string[] args)
         {
             string inpPath = @".\input.txt";
             CentralInterpolation p = new CentralInterpolation(inpPath);
+            List<double> res = new List<double>();
             p.Perform_1st_Gauss(2);
-            p.Display();
+            int[,] table = CentralInterpolation.Construct_coeff_matrix(5);
+
+            res = matMul(p.Gauss, table);
+            res.ForEach(x => Console.Write(x + " "));
         }
     }
 }
