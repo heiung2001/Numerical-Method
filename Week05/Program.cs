@@ -34,7 +34,7 @@ namespace Week05
             temp[0] = Y[idx_left];
             for (int i = 1; i < n; i++)
             {
-                temp[i] = temp[i-1] - above[i-1];
+                temp[i] = above[i-1] - temp[i-1];
             }
             below.Add(temp[n-1]);
 
