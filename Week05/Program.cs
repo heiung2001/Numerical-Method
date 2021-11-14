@@ -9,10 +9,9 @@ namespace Week05
     {
         public List<double> X { get; private set; } = new List<double>();
         public List<double> Y { get; private set; } = new List<double>();
+        public List<double> above { get; protected set; } = new List<double>();
+        public List<double> below { get; protected set; } = new List<double>();
         private double h => Math.Abs(X[0] - X[1]);
-        public List<double> above { get; private set; } = new List<double>();
-        public List<double> below { get; private set; } = new List<double>();
-        public List<double> Gauss { get; private set; } = new List<double>();
 
         public CentralInterpolation(List<double> X, List<double> Y)
         {
@@ -55,42 +54,13 @@ namespace Week05
             return temp;
         }
 
-        public List<double> Perform_1st_Gauss(int idx)     // Chỉ số của x0 (mốc nội suy trung tâm)
-        {
-            List<double> res = new List<double>();
-            int[,] t_table;
-            int k = 0;
-
-            /* Ban đầu */
-            above.Add(Y[idx]);
-            below.Add(Y[idx]);
-            Gauss.Add(Y[idx]);
-
-            /* Thêm lần lượt các mốc nội suy PT */
-            for (k = 1; k <= Math.Min(idx, X.Count-idx-1); ++k)
-            {
-                below = Add_Below(idx+k);
-                above = Add_Above(idx-k);
-                Gauss.AddRange(below.TakeLast(2));
-            }
-
-            for (int i = 0; i < Gauss.Count; ++i)
-            {
-                Gauss[i] = Gauss[i]/Enumerable.Range(1, i).Aggregate(1, (p, item) => p*item);
-            }
-
-            /* Xây dựng ma trận hệ số t */
-            t_table = Program.Construct_coeff_matrix(2*k-1);
-
-            res = Program.matMul(Gauss, t_table);
-
-            return res;
-        }
         public List<double> InterpolateAt(double x)
         {
             var k = Array.IndexOf(X.ToArray(), X.OrderBy(elm => Math.Abs(elm-x)).First());
-            return Perform_1st_Gauss(k);
+            return Perform(k);
         }
+        public virtual List<double> Perform(int idx) { return new List<double>(); }
+        public virtual double[,] Construct_table(int n) { return new double[0, 0]; }
 
         public void P(List<double> pol, double x, int x0_idx)
         {
@@ -107,31 +77,7 @@ namespace Week05
 
     class Program
     {
-        static public int[,] Construct_coeff_matrix(int numberOfX)
-        {
-            int n = numberOfX;
-            int[,] matrix = new int[n, n];
-            int[] x = new int[n];
-
-            matrix[0, n-1] = 1;
-            for (int i = 0; i < n; i++)
-            {
-                if ((i+1) % 2 == 0)    { x[i] = (i+1) / 2;  }
-                if ((i+1) % 2 != 0)    { x[i] = -(i+1) / 2; }
-            }
-            
-            for (int i = 1; i < n; i++)
-            {
-                matrix[i, n-i-1] = 1;
-                for (int j = n-i; j < n-1; j++)
-                {
-                    matrix[i, j] = matrix[i-1, j+1] - x[i-1]*matrix[i-1, j];
-                }
-            }
-
-            return matrix;
-        }
-        static public List<double> matMul(List<double> lst, int[,] arr)
+        static public List<double> matMul(List<double> lst, double[,] arr)
         {
             int n = lst.Count();
             List<double> temp = new List<double>(new double[n]);
@@ -149,10 +95,30 @@ namespace Week05
         static void Main(string[] args)
         {
             string inpPath = @".\input.txt";
-            CentralInterpolation user = new CentralInterpolation(inpPath);
-            var pol = user.InterpolateAt(2.4);
 
+            /* Công thức Gauss*/
+            // GaussInterpolation user = new GaussInterpolation(inpPath);
+            // var pol = user.InterpolateAt(2.4);
+            // pol.ForEach(x => Console.Write(x + " "));
+            // Console.WriteLine();
+            // Console.WriteLine("----------------------->\nDecrease");
+            // user.P(pol, 2.4, 2);
+
+            /* Công thức Stirling */
+            StirlingInterpolation user = new StirlingInterpolation(inpPath);
+            var pol = user.InterpolateAt(2.5);
             pol.ForEach(x => Console.Write(x + " "));
+            Console.WriteLine();
+            Console.WriteLine("----------------------->\nDecrease");
+            user.P(pol, 2.5, 2);
+
+            /* Công thức Bessel */
+            // BesselInterpolation user = new BesselInterpolation(inpPath);
+            // var pol = user.InterpolateAt(25);
+            // pol.ForEach(x => Console.Write(x + " "));
+            // Console.WriteLine();
+            // Console.WriteLine("----------------------->\nDecrease");
+            // user.P(pol, 25, 1);
         }
     }
 }
