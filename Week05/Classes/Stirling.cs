@@ -10,9 +10,9 @@ namespace Week05
         
         public StirlingInterpolation(string filePath) : base(filePath) {}
         
-        public List<double> Find_Even(int[,] table)
+        public List<double> Find_Even(double[,] table)
         {
-            List<double> temp = new List<double>();
+            var temp = new List<double>();
 
             for (int i = 2; i < Stirling.Count; i += 2)
             {
@@ -23,9 +23,9 @@ namespace Week05
 
             return temp;
         }
-        public List<double> Find_Odd(int[,] table)
+        public List<double> Find_Odd(double[,] table)
         {
-            List<double> temp = new List<double>();
+            var temp = new List<double>();
 
             for (int i = 1; i < Stirling.Count; i += 2)
             {
@@ -34,13 +34,13 @@ namespace Week05
 
             return Program.matMul(temp, table);
         }
-        public List<double> Merge(int[,] table)
+        public List<double> Merge(double[,] table)
         {
-            var res = new List<double>();
             var even = new Queue<double>(Find_Even(table));
             var odd = new Queue<double>(Find_Odd(table));
+            var res = new List<double>();
             var n = Math.Min(even.Count, odd.Count);
-
+            
             for (int i = 0; i < n; i++)
             {
                 res.Add(even.Dequeue());
@@ -53,8 +53,8 @@ namespace Week05
 
         public override List<double> Perform(int pivot)
         {
-            List<double> result = new List<double>();
-            int[,] t_table;
+            var result = new List<double>();
+            var t_table = new double[0, 0];
             int k = 0;
 
             above.Add(Y[pivot]);
@@ -78,10 +78,10 @@ namespace Week05
 
             return result;
         }
-        public override int[,] Construct_table(int n)
+        public override double[,] Construct_table(int n)
         {
-            int[,] a = new int[n, n];
-            int[] u = new int[n];
+            var a = new double[n, n];
+            var u = new double[n];
 
             for (int i = 0; i < n; i++)
             {
