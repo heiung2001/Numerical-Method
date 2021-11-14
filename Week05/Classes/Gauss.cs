@@ -10,18 +10,16 @@ namespace Week05
 
         public GaussInterpolation(string filePath) : base(filePath) {}
 
-        public override List<double> Perform(int idx)
+        public List<double> Perform_I(int idx)
         {
             List<double> res = new List<double>();
-            int[,] t_table;
+            double[,] t_table;
             int k = 0;
 
-            /* Ban đầu */
             above.Add(Y[idx]);
             below.Add(Y[idx]);
             Gauss.Add(Y[idx]);
 
-            /* Thêm lần lượt các mốc nội suy PT */
             for (k = 1; k <= Math.Min(idx, X.Count-idx-1); ++k)
             {
                 below = Add_Below(idx+k);
@@ -31,19 +29,57 @@ namespace Week05
 
             for (int i = 0; i < Gauss.Count; ++i)
             {
-                Gauss[i] = Gauss[i]/Enumerable.Range(1, i).Aggregate(1, (p, item) => p*item);
+                res.Add(Gauss[i]/Enumerable.Range(1, i).Aggregate(1, (p, item) => p*item));
             }
 
-            /* Xây dựng ma trận hệ số t */
             t_table = Construct_table(2*k-1);
-
-            res = Program.matMul(Gauss, t_table);
+            res = Program.matMul(res, t_table);
 
             return res;
         }
-        public override int[,] Construct_table(int n)
+        public List<double> Perform_II(int idx)
         {
-            int[,] matrix = new int[n, n];
+            List<double> res = new List<double>();
+            double[,] t_table;
+            int k = 0;
+
+            above.Add(Y[idx]);
+            below.Add(Y[idx]);
+            Gauss.Add(Y[idx]);
+
+            for (k = 1; k <= Math.Min(idx, X.Count-idx-1); ++k)
+            {
+                above = Add_Above(idx-k);
+                below = Add_Below(idx+k);
+                Gauss.AddRange(above.TakeLast(2));
+            }
+
+            for (int i = 0; i < Gauss.Count; ++i)
+            {
+                res.Add(Gauss[i]/Enumerable.Range(1, i).Aggregate(1, (p, item) => p*item));
+            }
+
+            t_table = Construct_table(2*k-1);
+            res = Program.matMul(res, t_table);
+
+            return res;
+        }
+
+        public override List<double> Perform(int idx)
+        {
+            List<double> res = new List<double>();
+
+            Console.WriteLine("Gauss I/ Gauss II ? (1 : 2). Your choice: ");
+            int choose = int.Parse(Console.ReadLine());
+
+            if (choose == 1) { res = Perform_I(idx);  }
+            if (choose == 2) { res = Perform_II(idx); }
+
+            return res;
+        }
+        public override double[,] Construct_table(int n)
+        {
+            double[,] matrix = new double[n, n];
             int[] x = new int[n];
 
             matrix[0, n-1] = 1;
