@@ -14,6 +14,7 @@ namespace Week05
         {
             List<double> res = new List<double>();
             double[,] t_table;
+            double[] t;
             int k = 0;
 
             above.Add(Y[idx]);
@@ -32,7 +33,13 @@ namespace Week05
                 res.Add(Gauss[i]/Enumerable.Range(1, i).Aggregate(1, (p, item) => p*item));
             }
 
-            t_table = Construct_table(2*k-1);
+            t = new double[2*k-1];
+            for (int i = 1; i < 2*k-1; i++)
+            {
+                if (i % 2 == 0)    { t[i] = i / 2;  }
+                if (i % 2 != 0)    { t[i] = -i / 2; }
+            }
+            t_table = base.Construct_table(t);
             res = Program.matMul(res, t_table);
 
             return res;
@@ -76,29 +83,6 @@ namespace Week05
             if (choose == 2) { res = Perform_II(idx); }
 
             return res;
-        }
-        public override double[,] Construct_table(int n)
-        {
-            double[,] matrix = new double[n, n];
-            int[] x = new int[n];
-
-            matrix[0, n-1] = 1;
-            for (int i = 0; i < n; i++)
-            {
-                if ((i+1) % 2 == 0)    { x[i] = (i+1) / 2;  }
-                if ((i+1) % 2 != 0)    { x[i] = -(i+1) / 2; }
-            }
-            
-            for (int i = 1; i < n; i++)
-            {
-                matrix[i, n-i-1] = 1;
-                for (int j = n-i; j < n-1; j++)
-                {
-                    matrix[i, j] = matrix[i-1, j+1] - x[i-1]*matrix[i-1, j];
-                }
-            }
-
-            return matrix;
         }
     }
 }
