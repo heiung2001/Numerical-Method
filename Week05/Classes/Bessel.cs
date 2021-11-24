@@ -64,6 +64,7 @@ namespace Week05
         public override List<double> Perform(int pivot)
         {
             var u_table = new double[0, 0];
+            double[] u;
             var result = new List<double> ();
             int k = 0;
 
@@ -83,38 +84,16 @@ namespace Week05
                 Bessel[i] = Bessel[i]/Enumerable.Range(1, i).Aggregate(1, (p, item) => p*item);
             }
 
-            u_table = Construct_table(k);
-            result = Merge(u_table);
-
-            return result;
-        }
-        public override double[,] Construct_table(int n)
-        {
-            double[,] table = new double[n, n];
-            double[] u = new double[n];
-
-            for (int i = 1; i < n; i++)
+            u = new double[k];
+            for (int i = 1; i < k; i++)
             {
                 u[i] = Math.Pow(2*i-1, 2) / 4;
             }
 
-            table[0, n-1] = 1;
-            for (int i = 1; i < n; i++)
-            {
-                table[i, n-i-1] = 1;
-                for (int j = n-i; j < n; j++)
-                {
-                    try
-                    {
-                        table[i, j] = table[i-1, j+1] - u[i]*table[i-1, j];
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        table[i, j] = -u[i]*table[i-1, j];
-                    }
-                }
-            }
-            return table;
+            u_table = base.Construct_table(u);
+            result = Merge(u_table);
+
+            return result;
         }
     }
 }
