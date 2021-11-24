@@ -60,7 +60,6 @@ namespace Week05
             return Perform(k);
         }
         public virtual List<double> Perform(int idx) { return new List<double>(); }
-        public virtual double[,] Construct_table(int n) { return new double[0, 0]; }
         public double[,] Construct_table(double[] vec)
         {
             var n = vec.Count();
@@ -116,17 +115,40 @@ namespace Week05
             return temp;
         }
 
+        static public void PrintMtx(double[,] a)
+        {
+            var n = Math.Sqrt(a.Length);
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write(a[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+        static public void PrintVec(double[] a)
+        {
+            var n = a.Length;
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(a[i] + " ");
+            }
+            Console.WriteLine();
+        }
+
         static void Main(string[] args)
         {
             string inpPath = @".\input1.txt";
 
             /* Công thức Gauss*/
-            // GaussInterpolation user = new GaussInterpolation(inpPath);
-            // var pol = user.InterpolateAt(2.4);
-            // pol.ForEach(x => Console.Write(x + " "));
-            // Console.WriteLine();
-            // Console.WriteLine("----------------------->\nDecrease");
-            // user.P(pol, 2.4, 2);
+            GaussInterpolation user = new GaussInterpolation(inpPath);
+            var pol = user.InterpolateAt(2.4);
+            pol.ForEach(x => Console.Write(x + " "));
+            Console.WriteLine();
+            Console.WriteLine("----------------------->\nDecrease");
+            user.P(pol, 2.6, 2);
 
             /* Công thức Stirling */
             // StirlingInterpolation user = new StirlingInterpolation(inpPath);
@@ -134,15 +156,15 @@ namespace Week05
             // pol.ForEach(x => Console.Write(x + " "));
             // Console.WriteLine();
             // Console.WriteLine("----------------------->\nDecrease");
-            // user.P(pol, 2, 2);
+            // user.P(pol, 2.6, 2);
 
             /* Công thức Bessel */
-            BesselInterpolation user = new BesselInterpolation(inpPath);
-            var pol = user.InterpolateAt(2.5);
-            pol.ForEach(x => Console.Write(x + " "));
-            Console.WriteLine();
-            Console.WriteLine("------------------------->\nDecrease");
-            user.P(pol, 2.6, 2);
+            // BesselInterpolation user = new BesselInterpolation(inpPath);
+            // var pol = user.InterpolateAt(2.5);
+            // pol.ForEach(x => Console.Write(x + " "));
+            // Console.WriteLine();
+            // Console.WriteLine("------------------------->\nDecrease");
+            // user.P(pol, 2.6, 2);
 
             // CentralInterpolation user = new CentralInterpolation(inpPath);
             // var test = new double[] { 0, 1.0/4, 9.0/4 };
