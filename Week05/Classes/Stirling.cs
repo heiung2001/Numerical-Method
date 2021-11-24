@@ -55,6 +55,7 @@ namespace Week05
         {
             var result = new List<double>();
             var t_table = new double[0, 0];
+            double[] t;
             int k = 0;
 
             above.Add(Y[pivot]);
@@ -73,38 +74,15 @@ namespace Week05
                 Stirling[i] = Stirling[i]/Enumerable.Range(1, i).Aggregate(1, (p, item) => p*item);
             }
 
-            t_table = Construct_table(k-1);
+            t = new double[k-1];
+            for (int i = 0; i < k-1; i++)
+            {
+                t[i] = i*i;
+            }
+            t_table = base.Construct_table(t);
             result = Merge(t_table);
 
             return result;
-        }
-        public override double[,] Construct_table(int n)
-        {
-            var a = new double[n, n];
-            var u = new double[n];
-
-            for (int i = 0; i < n; i++)
-            {
-                u[i] = i*i;
-            }
-
-            a[0, n-1] = 1;
-            for (int i = 1; i < n; i++)
-            {
-                a[i, n-i-1] = 1;
-                for (int j = n-i; j < n; j++)
-                {
-                    try
-                    {
-                        a[i, j] = a[i-1, j+1] - u[i]*a[i-1, j];
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        a[i, j] = -u[i]*a[i-1, j];
-                    }
-                }
-            }
-            return a;
         }
     }
 }
