@@ -61,6 +61,30 @@ namespace Week05
         }
         public virtual List<double> Perform(int idx) { return new List<double>(); }
         public virtual double[,] Construct_table(int n) { return new double[0, 0]; }
+        public double[,] Construct_table(double[] vec)
+        {
+            var n = vec.Count();
+            var table = new double[n, n];
+
+            table[0, n-1] = 1;
+            for (int i = 1; i < n; i++)
+            {
+                table[i, n-i-1] = 1;
+                for (int j = n-i; j < n; j++)
+                {
+                    try
+                    {
+                        table[i, j] = table[i-1, j+1] - vec[i]*table[i-1, j];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        table[i, j] = -vec[i]*table[i-1, j];
+                    }
+                }
+            }
+
+            return table;
+        }
 
         public void P(List<double> pol, double x, int x0_idx)
         {
@@ -120,11 +144,18 @@ namespace Week05
             Console.WriteLine("------------------------->\nDecrease");
             user.P(pol, 2.6, 2);
 
-            // BesselGaussInterpolation user = new BesselGaussInterpolation(inpPath);
-            // var pol = user.InterpolateAt(2.5);
-            // pol.ForEach(x => Console.Write(x + " "));
-            // Console.WriteLine();
-            // Console.WriteLine("------------------------->\nDecrease");
+            // CentralInterpolation user = new CentralInterpolation(inpPath);
+            // var test = new double[] { 0, 1.0/4, 9.0/4 };
+            // var n = test.Count();
+            // var table = user.Construct_table(test);
+            // for (int i = 0; i < n; i++)
+            // {
+            //     for (int j = 0; j < n; j++)
+            //     {
+            //         Console.Write(table[i, j] + " ");
+            //     }
+            //     Console.WriteLine();
+            // }
         }
     }
 }
