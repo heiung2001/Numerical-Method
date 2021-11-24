@@ -11,7 +11,7 @@ namespace Week05
         public List<double> Y { get; private set; } = new List<double>();
         public List<double> above { get; protected set; } = new List<double>();
         public List<double> below { get; protected set; } = new List<double>();
-        private double h => Math.Abs(X[0] - X[1]);
+        protected double h => Math.Abs(X[0] - X[1]);
 
         public CentralInterpolation(List<double> X, List<double> Y)
         {
@@ -94,7 +94,7 @@ namespace Week05
 
         static void Main(string[] args)
         {
-            string inpPath = @".\input.txt";
+            string inpPath = @".\input1.txt";
 
             /* Công thức Gauss*/
             // GaussInterpolation user = new GaussInterpolation(inpPath);
@@ -105,20 +105,26 @@ namespace Week05
             // user.P(pol, 2.4, 2);
 
             /* Công thức Stirling */
-            StirlingInterpolation user = new StirlingInterpolation(inpPath);
-            var pol = user.InterpolateAt(2.5);
-            pol.ForEach(x => Console.Write(x + " "));
-            Console.WriteLine();
-            Console.WriteLine("----------------------->\nDecrease");
-            user.P(pol, 2.5, 2);
-
-            /* Công thức Bessel */
-            // BesselInterpolation user = new BesselInterpolation(inpPath);
-            // var pol = user.InterpolateAt(25);
+            // StirlingInterpolation user = new StirlingInterpolation(inpPath);
+            // var pol = user.InterpolateAt(2.5);
             // pol.ForEach(x => Console.Write(x + " "));
             // Console.WriteLine();
             // Console.WriteLine("----------------------->\nDecrease");
-            // user.P(pol, 25, 1);
+            // user.P(pol, 2, 2);
+
+            /* Công thức Bessel */
+            BesselInterpolation user = new BesselInterpolation(inpPath);
+            var pol = user.InterpolateAt(2.5);
+            pol.ForEach(x => Console.Write(x + " "));
+            Console.WriteLine();
+            Console.WriteLine("------------------------->\nDecrease");
+            user.P(pol, 2.6, 2);
+
+            // BesselGaussInterpolation user = new BesselGaussInterpolation(inpPath);
+            // var pol = user.InterpolateAt(2.5);
+            // pol.ForEach(x => Console.Write(x + " "));
+            // Console.WriteLine();
+            // Console.WriteLine("------------------------->\nDecrease");
         }
     }
 }
