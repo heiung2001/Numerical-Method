@@ -165,19 +165,6 @@ namespace Week05
             // Console.WriteLine();
             // Console.WriteLine("------------------------->\nDecrease");
             // user.P(pol, 2.6, 2);
-
-            // CentralInterpolation user = new CentralInterpolation(inpPath);
-            // var test = new double[] { 0, 1.0/4, 9.0/4 };
-            // var n = test.Count();
-            // var table = user.Construct_table(test);
-            // for (int i = 0; i < n; i++)
-            // {
-            //     for (int j = 0; j < n; j++)
-            //     {
-            //         Console.Write(table[i, j] + " ");
-            //     }
-            //     Console.WriteLine();
-            // }
         }
     }
 }
