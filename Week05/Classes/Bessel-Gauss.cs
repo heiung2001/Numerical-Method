@@ -92,39 +92,10 @@ namespace Week05
                 Bessel[i] = (Bessel[i]/Enumerable.Range(1, i).Aggregate(1, (p, item) => p*item));
             }
 
-            var table = Construct_table((Bessel.Count)/2);
-            res = Merge(table);
+            // var table = Construct_table((Bessel.Count)/2);
+            // res = Merge(table);
 
             return res;
-        }
-        public override double[,] Construct_table(int n)
-        {
-            double[,] a = new double[n, n];
-            double[] u = new double[n];
-
-            for (int i = 1; i < n; i++)
-            {
-                u[i] = Math.Pow(2*i-1, 2)/4;
-            }
-
-            a[0, n-1] = 1;
-            for (int i = 1; i < n; i++)
-            {
-                a[i, n-i-1] = 1;
-                for (int j = n-i; j < n; j++)
-                {
-                    try
-                    {
-                        a[i, j] = a[i-1, j+1] - u[i]*a[i-1, j];
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        a[i, j] = -u[i]*a[i-1, j];
-                    }
-                }
-            }
-
-            return a;
         }
     }
 }
