@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="S_ckAL101M0e-dxrTt6k" name="Page-1">
-        <mxGraphModel dx="825" dy="479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1165" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -68,145 +68,181 @@
                 <mxCell id="22" value="k ++" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="702.5" y="436.25" width="75" height="37.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="25" target="30">
+                <mxCell id="80" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="25" target="79">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="Với mỗi phần tử của Bessel, chia cho giai thừa của chỉ số của nó" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="472.5" y="570" width="125" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="27" target="32">
+                <mxCell id="93" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="27" target="30">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="Xây dựng bảng hệ số đa thức&lt;br&gt;u_table = Construct_table(k)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="20" y="570" width="160" height="60" as="geometry"/>
+                    <mxGeometry x="455" y="822.5" width="160" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="30" target="27">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="170" y="600" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="30" value="List even&lt;br&gt;List odd&lt;br&gt;List res" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-                    <mxGeometry x="260" y="570" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="36" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="32" target="35">
+                <mxCell id="94" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="30" target="32">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="even = Find_even(u_table)&lt;br&gt;odd = Find_odd(u_table)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="25" y="690" width="150" height="60" as="geometry"/>
+                <mxCell id="30" value="List even&lt;br&gt;List odd&lt;br&gt;List res" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="700" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="35" target="37">
+                <mxCell id="95" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="32" target="35">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="res = Merge(even, odd)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="270" y="690" width="130" height="60" as="geometry"/>
+                <mxCell id="32" value="even = Find_even(u_table)&lt;br&gt;odd = Find_odd(u_table)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="700" width="150" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" value="Kết thúc" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
-                    <mxGeometry x="472.5" y="690" width="100" height="60" as="geometry"/>
+                <mxCell id="97" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="35" target="37">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" value="Gói tìm hệ số chẵn, lẻ" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                <mxCell id="35" value="res = Merge(even, odd)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="938.75" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Kết thúc" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="485" y="938.75" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Gói tìm hệ số chẵn, lẻ" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
                     <mxGeometry x="1100" y="20" width="350" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="40" target="41">
+                <mxCell id="42" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="40" target="41" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="Bắt đầu" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="40" value="Bắt đầu" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="1225" y="70" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="41" target="43">
+                <mxCell id="44" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="41" target="43" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" value="List temp1, temp2&lt;br&gt;int i = 0, j = 1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" vertex="1" parent="1">
+                <mxCell id="41" value="List temp1, temp2&lt;br&gt;int i = 0, j = 1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" parent="1" vertex="1">
                     <mxGeometry x="1215" y="170" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="Đún" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="43" target="47">
+                <mxCell id="48" value="Đún" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="43" target="47" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="43" target="53">
+                <mxCell id="54" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="43" target="53" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="i &amp;lt; len(Bessel)" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+                <mxCell id="43" value="i &amp;lt; len(Bessel)" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
                     <mxGeometry x="1230" y="270" width="90" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="51" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="45" target="50">
+                <mxCell id="51" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="45" target="50" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="temp1.Append(Bessel[i])&lt;br&gt;temp2.Append(Bessel[j])" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+                <mxCell id="45" value="temp1.Append(Bessel[i])&lt;br&gt;temp2.Append(Bessel[j])" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
                     <mxGeometry x="990" y="417.5" width="175" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="47" target="45">
+                <mxCell id="49" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="47" target="45" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="j = i+1" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+                <mxCell id="47" value="j = i+1" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
                     <mxGeometry x="1042.5" y="297.5" width="70" height="35" as="geometry"/>
                 </mxCell>
-                <mxCell id="52" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="50" target="43">
+                <mxCell id="52" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="50" target="43" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="50" value="i += 2" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+                <mxCell id="50" value="i += 2" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
                     <mxGeometry x="1238" y="428.75" width="75" height="37.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="60" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="53" target="59">
+                <mxCell id="60" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="53" target="59" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="53" value="temp1 = temp1 x table&lt;br&gt;temp2 = temp2 x table" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+                <mxCell id="53" value="temp1 = temp1 x table&lt;br&gt;temp2 = temp2 x table" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
                     <mxGeometry x="1420" y="285" width="135" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="Kết thúc" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="55" value="Kết thúc" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
                     <mxGeometry x="1437.5" y="70" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="59" target="55">
+                <mxCell id="61" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="59" target="55" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="59" value="Trả về temp1, temp2&lt;br&gt;(chẵn, lẻ)" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+                <mxCell id="59" value="Trả về temp1, temp2&lt;br&gt;(chẵn, lẻ)" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
                     <mxGeometry x="1427.5" y="170" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="62" value="Input: u_table&lt;br&gt;Output: even, odd" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;strokeWidth=1;verticalAlign=bottom;align=left;" vertex="1" parent="1">
+                <mxCell id="62" value="Input: u_table&lt;br&gt;Output: even, odd" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;strokeWidth=1;verticalAlign=bottom;align=left;" parent="1" vertex="1">
                     <mxGeometry x="890" y="30" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" value="Gói gộp even, odd" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                <mxCell id="63" value="Gói gộp even, odd" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
                     <mxGeometry x="1240" y="550" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="66" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="64" target="65">
+                <mxCell id="66" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="64" target="65" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="64" value="Bắt đầu" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
-                    <mxGeometry x="1085" y="610" width="100" height="60" as="geometry"/>
+                <mxCell id="64" value="Bắt đầu" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="1205" y="620" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="65" target="67">
+                <mxCell id="68" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="65" target="67" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" value="List temp&lt;br&gt;int n = len(even//odd)&lt;br&gt;int i = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" vertex="1" parent="1">
-                    <mxGeometry x="1070" y="710" width="130" height="60" as="geometry"/>
+                <mxCell id="65" value="List temp&lt;br&gt;int n = len(even//odd)&lt;br&gt;int i = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1190" y="720" width="130" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="71" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="67" target="70">
+                <mxCell id="71" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="67" target="70" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="76" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="67" target="75">
+                <mxCell id="76" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="67" target="75" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="67" value="i &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
-                    <mxGeometry x="1095" y="840" width="80" height="80" as="geometry"/>
+                <mxCell id="67" value="i &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1215" y="850" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="73" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="70" target="72">
+                <mxCell id="73" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="70" target="72" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="70" value="temp.Appen(odd[i])&lt;br&gt;temp.Appen(even[i])" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
-                    <mxGeometry x="890" y="850" width="120" height="60" as="geometry"/>
+                <mxCell id="70" value="temp.Appen(odd[i])&lt;br&gt;temp.Appen(even[i])" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1010" y="860" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="72" target="67">
+                <mxCell id="74" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="72" target="67" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" value="i ++" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
-                    <mxGeometry x="920" y="1000" width="60" height="30" as="geometry"/>
+                <mxCell id="72" value="i ++" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="1010" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="78" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="75" target="77">
+                <mxCell id="78" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="75" target="77" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="75" value="Trả về temp" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
-                    <mxGeometry x="1235" y="850" width="120" height="60" as="geometry"/>
+                <mxCell id="75" value="Trả về temp" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1355" y="860" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="77" value="Kết thúc" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
-                    <mxGeometry x="1427.5" y="850" width="100" height="60" as="geometry"/>
+                <mxCell id="77" value="Kết thúc" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="1547.5" y="860" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="79" target="81">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="List u cỡ k,&lt;br&gt;2D array u_table&lt;br&gt;cỡ kxk" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="570" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="81" target="84">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="int i = 1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="710" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="84" target="86">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="84" target="27">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="i &amp;lt; k" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="297.5" y="820" width="65" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="86" target="88">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="200" y="852" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="140" y="969"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="86" value="u[i] = (2i-1)^2 / 4" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="822.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="88" target="84">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="k ++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="205" y="950" width="75" height="37.5" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
