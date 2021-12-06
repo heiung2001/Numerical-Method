@@ -1,5 +1,6 @@
 .idea
 *.json
-Week05/.vscode/launch.json
-Week05/.vscode/tasks.json
+Week05/.vscode
 Week05/Week05.csproj
+Week07/obj
+Week07/Week07.csproj
