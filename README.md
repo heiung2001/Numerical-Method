@@ -19,3 +19,7 @@ This repo contains some mini project in Numerical method course.
 2. Euler (forward, backward)
 3. Runge - Kutta (1, 2, 3, 4 order)
 4. Adam - Bashforth - Moulton
+
+## Some other problems
+1. Spline function
+2. Least square method
