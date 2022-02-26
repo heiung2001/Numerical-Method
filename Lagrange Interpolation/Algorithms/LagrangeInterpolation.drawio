@@ -1,0 +1,479 @@
+<mxfile host="65bd71144e">
+    <diagram id="aGfyfCyKucJYOHcTv8Rk" name="Formula1">
+        <mxGraphModel dx="772" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Nội Suy Lagrange&lt;br&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Công thức thứ 1&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="275" y="10" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Bắt đầu" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="90" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="10" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="4" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="List X, List Y&lt;br&gt;List omega,&lt;br&gt;List res" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="210" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="omega = factorize(List X)&lt;br&gt;d = find_d(List X, List Y)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="310" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="d = mảng 1 chiều&lt;br&gt;res = mảng 0 cỡ n" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="58.75" y="310" width="162.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;font style=&quot;font-size: 14px&quot;&gt;Đúng&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="14" target="18" edge="1">
+                    <mxGeometry x="-0.2571" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="565" y="240"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="&lt;font style=&quot;font-size: 14px&quot;&gt;Sai&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="14" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="k &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="305" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="18" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="double c,&lt;br&gt;temp = mảng 1 chiều&lt;br&gt;a = mảng 1 chiều" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="210" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="20" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="c = Y[k] / d[k]" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="23" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="temp = delete(List X, k)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="70" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="28" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="a = factorize(temp)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="30" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="res += c*a" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="32" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="k ++" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="715" y="322.5" width="70" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=1;" parent="1" source="35" target="37" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Xuất ra các phần tử của mảng res" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Kết thúc" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="430" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Gói phân tách đa thức&lt;br&gt;factorize" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1137" y="30" width="277" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="40" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Bát đầu" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="80" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="&lt;b&gt;Input&lt;/b&gt;: a-Mảng các số&lt;br&gt;&lt;b&gt;Output:&lt;/b&gt; Mảng các hệ số của đa thức" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="10" width="80" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="42" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="n = length(a)&lt;br&gt;c = Mảng số 0 cỡ n+2" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="993.5" y="190" width="153" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="47" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="c[n] = 1" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1235.5" y="200" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="49" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="i = n-1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1375.5" y="200" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="51" target="53" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="51" target="70" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="i &amp;gt;= 0" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1381.75" y="280" width="67.5" height="67.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="53" target="58" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="c[i] = 1" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1235.5" y="293.43" width="81.26" height="40.63" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="58" target="60" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="j = i+1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1090" y="293.43" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="60" target="62" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="60" target="67" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="j &amp;lt; n+1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1096.25" y="375" width="67.5" height="67.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="62" target="64" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="c[j] = c[j+1] - c[j]*a[i]" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1071" y="504" width="119" height="46.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="64" target="60" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="j ++" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="391.25" width="70" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="67" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="i ++" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1380.5" y="391.25" width="70" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="70" target="72" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1570" y="600" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1550" y="530"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="70" value="temp = mảng 1 &lt;br&gt;chiều cỡ n+1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1503" y="283.75" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="72" target="74" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="i = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="510.25" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="74" target="80" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;" parent="1" source="74" target="85" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="i &amp;lt; n+1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1265" y="580" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="80" target="82" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1107" y="698"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="80" value="temp[i] = c[i]" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1056.5" y="590" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;" parent="1" source="82" target="74" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="i ++" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="680" width="70" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=1;" parent="1" source="85" target="87" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="Trả về temp" style="whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="1413" y="592.5" width="90" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="Kết thúc" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="1570" y="585" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="Gói tìm các hệ số D&lt;br&gt;find_d" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="1987" y="30" width="277" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="&lt;b&gt;Input: X - Mảng 1 chiều&lt;br&gt;&lt;div&gt;&lt;b&gt;Output: Mảng các hệ số d&lt;/b&gt;&lt;/div&gt;&lt;/b&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;verticalAlign=bottom;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="1740" y="40" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="91" target="92">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="Bát đầu" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1930" y="100" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="92" target="95">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="temp = Mảng 2 chiều số 0&lt;br&gt;cỡ nxn&lt;br&gt;res = Mảng 1 chiều số 1&lt;br&gt;&amp;nbsp;cỡ nx1&lt;br&gt;int i = 0, j = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" vertex="1" parent="1">
+                    <mxGeometry x="1890.75" y="223.43" width="178.5" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="95" target="99">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="95" target="110">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2120" y="373.75" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="95" value="i &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="1950" y="343.75" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="99" target="101">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="99" target="106">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="j &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="1950" y="493.75" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="101" target="103">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="temp[i][j] = X[j]" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2100" y="493.75" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="103" target="99">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="j ++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1940" y="623.75" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="106" target="95">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1820" y="373.75"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="106" value="i ++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1780" y="503.75" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="110" target="111">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="i = 0" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2140" y="353.75" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="111" target="113">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="111" target="119">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2338" y="503.75" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="111" value="i &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2310" y="345.63" width="56.25" height="56.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="113" target="115">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="temp[i]&amp;nbsp; -= X[i]" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2278.125" y="233.755" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="115" target="111">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2500" y="374"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="115" value="i ++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2460" y="243.75" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="119" target="120">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="i = 0" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2298.13" y="503.75" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="120" target="122">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="120" target="127">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="i &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2310" y="681.88" width="56.25" height="56.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="122" target="124">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="temp[i][i] = 1" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2420.005" y="679.995" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="124" target="120">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="i ++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2440.01" y="799.99" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="127" target="129">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="i = 0&lt;br&gt;j = 0" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2020" y="690.01" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="129" target="133">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1900.01" y="801.5600000000001" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="144" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="129" target="143">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="i &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2031.8700000000003" y="773.4300000000001" width="56.25" height="56.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="131" target="135">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1900.01" y="984.9950000000001" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="141" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="131" target="140">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="j &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1871.8800000000003" y="864.99" width="56.25" height="56.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="133" target="131">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1900.015" y="866.5600000000001" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="133" value="res[i] = 1" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1860.0099999999998" y="781.5500000000001" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="135" target="137">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1840.0050000000003" y="1015.0000000000002" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="135" value="res[i] *= temp[i][j]" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1839.9950000000003" y="985.005" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="137" target="131">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1760.01" y="892.99"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="137" value="i ++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1720.01" y="995" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="140" target="129">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="i ++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2020" y="873.12" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="143" target="145">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="Trả về res" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2170" y="775.77" width="103.11" height="51.56" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" value="Kết thúc" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="2171.56" y="900" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="Gói xóa phần tử trong mảng 1 chiều&lt;br&gt;delete" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="2837" y="30" width="277" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="Input: X - Mảng 1 chiều,&lt;br&gt;int k - vị trí của phân tử muốn xóa&lt;br&gt;Output: Mảng 1 chiều" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;verticalAlign=bottom;" vertex="1" parent="1">
+                    <mxGeometry x="2600" y="20" width="80" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="149" target="150">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="Bát đầu" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="2780" y="130" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="150" target="155">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3000" y="283.16666666666674" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="150" value="res = mảng 1 chiều&lt;br&gt;cỡ n-1&lt;br&gt;int i = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;" vertex="1" parent="1">
+                    <mxGeometry x="2761.47" y="256.25" width="137.06" height="53.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="158" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="155" target="157">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="155" target="165">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="i &amp;lt; n" style="rhombus;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="2975" y="253.44" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="157" target="159">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" value="Sai" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="157" target="161">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="X[i] = X[k]" style="rhombus;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;direction=south;" vertex="1" parent="1">
+                    <mxGeometry x="3130" y="253.13" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="159" target="161">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="3303" y="140"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="159" value="res[i] = X[i]" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="3260" y="261.87" width="86.26" height="43.13" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="161" target="155">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="i ++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="3120" y="120" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="165" target="167">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="Trả về res" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2961.56" y="360.30999999999995" width="86.88" height="43.44" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="Bát đầu" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="3120" y="352.03" width="100" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
