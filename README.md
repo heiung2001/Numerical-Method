@@ -1,9 +1,21 @@
 # Numerical Method
 
-## Week 1: Đa thức nội suy
+This repo contains some mini project in Numerical method course.
 
-## Week 2: Nội suy Lagrange
+## Interpolation Methods
+1. Lagrange
+2. Newton
+3. Gauss
+4. Stirling
+5. Bessel
 
-## Week 3: Nội suy Newton
+## Application of interpolation to approximate derivative and integral
+1. Simpson
+2. Trapezoid
+3. Newton - Cotes
 
-## Week 5: Nội suy trung tâm
+## Methods to find root of IVPs
+1. Picard
+2. Euler (forward, backward)
+3. Runge - Kutta (1, 2, 3, 4 order)
+4. Adam - Bashforth - Moulton
